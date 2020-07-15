@@ -1,0 +1,19 @@
+<div class="container">
+  <div class="row sign-up-form">
+    <div class="col s12 m12 l12">
+      <div class="card-panel red lighten-2">
+        <span class="white-text">
+          <strong><%= pluralize(@student.errors.count, 'error') %></strong> prohibited your account creation!
+          <ul>
+            <% @student.errors.full_messages.each do |message| %>
+              <li><%= message %></li>
+            <% end %>
+          </ul>
+        </span>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+
