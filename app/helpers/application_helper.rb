@@ -12,5 +12,13 @@ module ApplicationHelper
       link_to 'Students', students_path
     end
   end
+
+  def show_name
+    if logged_in?
+      current_user.name 
+    else
+      'Account'
+    end
+  end
   
 end
