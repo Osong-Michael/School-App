@@ -5,7 +5,9 @@
       <p><%= course.description %></p>
     </div>
     <div class="card-action">
-      <a href="#">Enroll</a>
+      <% if enrolled?(course) %>
+        <%= link_to 'Enroll', enroll_path(course_id: course.id), method: :post	%>
+      <% end %>
       <a href="#">Info</a>
     </div>
   </div>

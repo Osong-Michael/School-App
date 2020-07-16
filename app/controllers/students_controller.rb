@@ -7,7 +7,7 @@ class StudentsController < ApplicationController
     @students = Student.all
   end
 
-  def show 
+  def show
   end
 
   def new

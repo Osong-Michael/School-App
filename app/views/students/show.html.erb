@@ -7,6 +7,11 @@
       </div>
       <div class="card-action">
         <h5 class="white-text">Current Enrollments</h5>
+        <ul>
+          <% @student.courses.each do |course| %>
+            <li><%= course.name %></li>
+          <% end %>
+        </ul>
       </div>
     </div>
     <% if current_user == @student %>
