@@ -1,0 +1,37 @@
+<ul id="dropdown1" class="dropdown-content">
+  <li> <%= session_link %> </li>
+  <li><%= signup %></li>
+    <% if logged_in? %>
+      <li><%= link_to 'Profile', student_path(current_user) %></li>
+    <% end %>
+  <li class="divider"></li>
+</ul>
+
+<ul id="dropdown2" class="dropdown-content">
+   <li> <%= session_link %> </li>
+   <li><%= signup %></li>
+    <% if logged_in? %>
+      <li><%= link_to 'Profile', student_path(current_user) %></li>
+    <% end %>
+    <li class="divider"></li>
+</ul>
+
+<nav>
+  <div class="container">
+    <div class="nav-wrapper">
+      <%= link_to 'LMU', root_path, class: 'brand-logo right' %>
+      <a href="#" data-target="mobile-demo" class="sidenav-trigger"><i class="material-icons">menu</i></a>
+      <ul id="nav-mobile" class="left hide-on-med-and-down">
+        <li><%= link_to 'Courses', root_path %></li>
+        <li><%= student_link %></li>
+        <li><a class="dropdown-trigger" href="#!" data-target="dropdown1"><%= show_name %><i class="material-icons right">arrow_drop_down</i></a></li>
+      </ul>
+
+      <ul class="sidenav" id="mobile-demo">
+        <li><%= link_to 'Courses', root_path %></li>
+        <li><%= student_link %></li>
+        <li><a class="dropdown-trigger" href="#!" data-target="dropdown2">Account<i class="material-icons right">arrow_drop_down</i></a></li>
+      </ul>
+    </div>
+  </div>
+</nav>
