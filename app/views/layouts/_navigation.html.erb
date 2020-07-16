@@ -15,17 +15,17 @@
 <nav>
   <div class="container">
     <div class="nav-wrapper">
-      <a href="#" class="brand-logo right">LMU</a>
+      <%= link_to 'LMU', root_path, class: 'brand-logo right' %>
       <a href="#" data-target="mobile-demo" class="sidenav-trigger"><i class="material-icons">menu</i></a>
       <ul id="nav-mobile" class="left hide-on-med-and-down">
-        <li><a href="#">Courses</a></li>
-        <li><a href="#">Enrollments</a></li>
+        <li><%= link_to 'Courses', root_path %></li>
+        <li><%= student_link %></li>
         <li><a class="dropdown-trigger" href="#!" data-target="dropdown1">Account<i class="material-icons right">arrow_drop_down</i></a></li>
       </ul>
 
       <ul class="sidenav" id="mobile-demo">
-        <li><a href="#">Courses</a></li>
-        <li><a href="#">Enrollments</a></li>
+        <li><%= link_to 'Courses', root_path %></li>
+        <li><%= student_link %></li>
         <li><a class="dropdown-trigger" href="#!" data-target="dropdown2">Account<i class="material-icons right">arrow_drop_down</i></a></li>
       </ul>
     </div>

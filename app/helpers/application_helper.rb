@@ -6,5 +6,11 @@ module ApplicationHelper
       link_to 'log in', login_path
     end
   end
+
+  def student_link
+    if logged_in?
+      link_to 'Students', students_path
+    end
+  end
   
 end
