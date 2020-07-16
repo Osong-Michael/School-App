@@ -10,24 +10,32 @@
             <div class="row">
               <div class="input-field col s12">
                 <%= f.text_field :name, placeholder: 'Enter name', class: 'validate', autofocus: true %>
-                <%= f.label :name %>
+                <%= f.label :name, class: 'active' %>
               </div>
             </div>
-            <%# <div class="row">
-              <div class="input-field col s12">
-                <input id="password" type="password" class="validate">
-                <label for="password">Password</label>
-              </div>
-            </div> %>
             <div class="row">
               <div class="input-field col s12">
                 <%= f.email_field :email, placeholder: 'Enter email', class: 'validate' %>
-                <%= f.label :email %>
+                <%= f.label :email, class: 'active' %>
+              </div>
+            </div>
+
+            <div class="row">
+              <div class="input-field col s12">
+                <%= f.password_field :password, class: 'validate' %>
+                <%= f.label :password, class: 'active' %>
               </div>
             </div>
             <div class="row">
               <div class="input-field col s12">
-                <%= f.submit(@student.new_record? ? "Sign Up" : "Update Profile", class: 'btn teal lighten-1 waves-effect waves-light') %>
+                <%= f.password_field :password_confirmation, class: 'validate' %>
+                <%= f.label :password_confirmation, class: 'active' %>
+              </div>
+            </div>
+
+            <div class="row">
+              <div class="input-field col s12">
+                <%= f.button(@student.new_record? ? "Sign Up" : "Update Profile", class: 'btn teal lighten-1 waves-effect waves-light') %>
               </div>
             </div>
           <% end %>
